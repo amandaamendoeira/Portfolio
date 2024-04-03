@@ -12,13 +12,13 @@
 
 *{ 
     margin: 0;
-    padding:0
+    padding: 0;
 }
     
 body {
     box-sizing: border-box;
     background-color: var(--cor-primaria);
-    color: var(--cor-secundaria)
+    color: var(--cor-secundaria);
 }
 
 .cabecalho {
@@ -81,7 +81,6 @@ body {
     font-size: 1.5rem;
 }
 
-
 .apresentacao__links__navegacao {
     display: flex;
     justify-content: center;
@@ -103,7 +102,7 @@ body {
    height: 32px;
 }
 
-.apresentacao__links__link:hover {
+.apresentacao__links__navegacao:hover {
     background-color: var(--cor-hover);
     padding: 3%;
 }
@@ -143,3 +142,4 @@ body {
     .apresentacao__conteudo {
         width: auto; /* automaticamente ajusta o conteudo, auto ou 100% */
     }
+}
