@@ -12,6 +12,6 @@
 
 ### Amanda Cavalcanti
 
-### Linkedin: https://www.linkedin.com/school/aluracursos/](https://www.linkedin.com/in/amandaamendoeira/
+### Linkedin: https://www.linkedin.com/in/amandaamendoeira/
 
 ```
