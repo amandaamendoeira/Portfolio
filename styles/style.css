@@ -190,16 +190,40 @@ body {
   gap: 200rem;
 }
 
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 2.5rem; /* altura do rodapé */
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem; /* altura do rodapé */
+}
+
 /* PARA SABER O REM DEVE DIVIDIR O VALOR EM PX POR 16PX */
 
-/* para mobile, usa o MEDIA QUERIES, obs: usou reverse porque a foto estava embaixo e quis ela em cima */
-
-@media (max-width: 1200px) {
+@media screen and (max-width: 390px) {
   .cabecalho {
-    padding: 10%;
+    padding: 0.5rem;
+    text-align: center;
+    max-width: 390px;
+    margin: 0 auto;
   }
+
   .cabecalho__menu {
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cabecalho__menu__link {
+    padding: 0.2rem;
+    text-align: center;
   }
 
   .apresentacao {
@@ -207,7 +231,98 @@ body {
     padding: 5%;
   }
 
+  .apresentacao__imagem {
+    width: 100%;
+  }
+
   .apresentacao__conteudo {
-    width: auto; /* automaticamente ajusta o conteudo, auto ou 100% */
+    width: 100%;
+  }
+
+  .rodape {
+    position: static;
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .cabecalho__menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--cor-terciaria);
+    cursor: pointer;
+  }
+
+  .cabecalho__menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+
+  .cabecalho__menu--active {
+    display: flex;
+  }
+
+  .cabecalho__menu__link {
+    padding: 1rem;
+    width: 100%;
+    background-color: var(--cor-primaria);
+    color: var(--cor-terciaria);
+  }
+}
+
+/* Estilos para Tela Grande */
+@media (min-width: 769px) {
+  .cabecalho__menu-toggle {
+    display: none;
+  }
+
+  .cabecalho__menu {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .cabecalho__menu__link {
+    padding: 0;
+    width: auto;
+  }
+
+  .cabecalho {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+
+  .cabecalho__menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 50%;
+  }
+
+  .cabecalho__menu__link {
+    padding: 0.5rem;
+    text-decoration: none;
+  }
+
+  .apresentacao__imagem {
+    width: 50%;
+  }
+
+  .rodape {
+    width: 100%;
+    max-width: 1843px;
+    margin: 0 auto;
+    padding: 1rem;
+    position: static;
   }
 }
